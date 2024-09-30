@@ -1,19 +1,32 @@
 flowchart TB
-    c1-->a2
+    a1[Please Select a Number]-->a2[You are Correct]
     subgraph one
-    a1-->a2
+    a3[Please Select a Number-->a4[Your Number was to High]
     end
     subgraph two
-    b1-->b2
+    a5[Please Select a Number]-->a6[Your Number was to Low]
     end
     subgraph three
-    c1-->c2
-    end
-    one --> two
-    three --> two
-    two --> c2
+
 
 ```mermaid
 flowchart TD
  Start([Start]) --> End([End])
 ***
+
+Setting Up the Game:
+Define the range within which the random number will be generated. 
+Use the Random function to generate a random integer within the specified range. 
+ranNum = Random(101)
+This will give you a random number between 0 and 100.
+
+User Interaction:
+Prompt the user to input their guess.
+Compare their guess with the randomly generated number.
+Feedback:
+If the user’s guess is equal to the random number, its a correct guess
+If the guess is too high, provide feedback “Your guess is too high."
+If the guess is too low, say something “Your guess is too low."
+
+Looping:
+Add the option to keep the game going regardless of the provided guess
